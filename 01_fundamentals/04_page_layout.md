@@ -1,12 +1,12 @@
 # 04: Page Layout
 
-This guide covers how to control the page layout of documents, including paper size, orientation, and margins.
+Page layout determines the physical dimensions of the document, including paper size, orientation, and margins. While the document class sets defaults, precise control over these elements is achieved through dedicated packages.
 
 ---
 
 ## The `geometry` Package
 
-Use the `geometry` package to control page layout. While some page layout `options` can be set in `\documentclass`, it’s best practice to define all dimensions with `geometry`.
+The `geometry` package provides a unified interface for defining page dimensions. While some page layout `options` can be set in `\documentclass`, it’s best practice to define all dimensions with `geometry`.
 
 - `\usepackage[<options>]{geometry}`: Loads the `geometry` package, enabling control over margins, paper size, orientation, and other page dimensions.
   

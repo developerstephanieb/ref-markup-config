@@ -7,7 +7,7 @@ A structured collection of LaTeX syntax, packages, templates, and practical exam
 ## Repository Structure
 
 ```
-latex_reference/
+latex/
 ├── 01_fundamentals/
 │   ├── 01_syntax.md
 │   ├── 02_document_structure.md 
