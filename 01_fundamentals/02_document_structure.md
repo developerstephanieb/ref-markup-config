@@ -10,7 +10,7 @@ Every LaTeX document begins with a configuration block called the **preamble**. 
 
 - `\documentclass[<options>]{<class>}`: The first command in any document. It specifies the document type.
 
-  | `class`   | Description                         |
+  | `<class>` | Description                         |
   | --------- | ----------------------------------- |
   | `article` | For short documents.                |
   | `report`  | For longer documents with chapters. |
@@ -96,7 +96,7 @@ Once the preamble is set, the main content is placed within a dedicated block an
 
 - `\chapter{<title>}`: Starts a new chapter (available only in `report` and `book` classes).
 
-- `\section{<title>}`, `\subsection{<title>}`, `\subsubsection{<title>}`: Hierarchical section headings that are automatically numbered. Adding an asterisk (`*`) to a command name (e.g., `\section*{...}`) creates an unnumbered heading.
+- `\section{<title>}`, `\subsection{<title>}`, `\subsubsection{<title>}`: Hierarchical section headings that are automatically numbered. Adding an asterisk (`*`) to a command name (e.g., `\section*{<title>}`) creates an unnumbered heading.
   
 - `\paragraph{<title>}`, `\subparagraph{<title>}`: The lowest-level headings, displayed inline with the following text.
 
@@ -104,14 +104,14 @@ Once the preamble is set, the main content is placed within a dedicated block an
 
 - `\setcounter{secnumdepth}{<level>}`: Sets the maximum depth for numbered section headings.
   
-  | `level` | Deepest Numbered Level |
-  | :-----: | ---------------------- |
-  |    0    | `\part`, `\chapter`    |
-  |    1    | `\section`             |
-  |    2    | `\subsection`          |
-  |    3    | `\subsubsection`       |
-  |    4    | `\paragraph`           |
-  |    5    | `\subparagraph`        |
+  | `<level>` | Deepest Numbered Level |
+  | :-------: | ---------------------- |
+  |     0     | `\part`, `\chapter`    |
+  |     1     | `\section`             |
+  |     2     | `\subsection`          |
+  |     3     | `\subsubsection`       |
+  |     4     | `\paragraph`           |
+  |     5     | `\subparagraph`        |
 
 ```latex
 \documentclass{article}

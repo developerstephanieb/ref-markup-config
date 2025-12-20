@@ -8,9 +8,9 @@ LaTeX provides a comprehensive set of tools for controlling the appearance of te
 
 A document's foundational style is set in the preamble, establishing the default look for all text in the document.
 
-- `\documentclass[<options>]{<class>}`: Sets base font size, paper size, and default font family.
+- `\documentclass[<options>]{<class>}`: Sets base font size, paper size, and page orientation.
 
-  | `options`                | Description                                                |
+  | `<options>`              | Description                                                |
   | ------------------------ | ---------------------------------------------------------- |
   | `10pt`, `11pt`, `12pt`   | Sets the base font size for the document.                  |
   | `a4paper`, `letterpaper` | Sets the paper size.                                       |
@@ -18,13 +18,13 @@ A document's foundational style is set in the preamble, establishing the default
   | `oneside`, `twoside`     | Sets the layout for single-sided or double-sided printing. |
   | `twocolumn`              | Typesets the document in two columns.                      |
 
-- `\renewcommand{\familydefault}{<family_code>}`: Sets the default font family.
+- `\renewcommand{\familydefault}{<family_code>}`: Overrides the default font family for the entire document.
 
-  | `family_code` | Description                               |
-  | ------------- | ----------------------------------------- |
-  | `\rmdefault`  | Sets the default to Roman (serif).        |
-  | `\sfdefault`  | Sets the default to Sans-serif.           |
-  | `\ttdefault`  | Sets the default to Monospace (Teletype). |
+  | `<family_code>` | Description                               |
+  | --------------- | ----------------------------------------- |
+  | `\rmdefault`    | Sets the default to Roman (serif).        |
+  | `\sfdefault`    | Sets the default to Sans-serif.           |
+  | `\ttdefault`    | Sets the default to Monospace (Teletype). |
 
 ```latex
 \documentclass[12pt]{article}
@@ -41,7 +41,7 @@ This text will be 12pt and sans-serif by default.
 
 ## Font Appearance
 
-In contrast to the global defaults, these font styles apply locally. They are implemented either as a command that takes text as an argument or as a **declaration** that switches the style for all subsequent text within its scope.
+Local font changes are implemented either as a **command** (which takes text as an argument) or as a **declaration** (which acts as a switch for all subsequent text within its scope).
 
 - `\textbf{<text>}`, `\bfseries`: Makes text bold.
 
@@ -83,17 +83,17 @@ This text is back to the document default.
 
 There are several environments for controlling the alignment and formatting of entire blocks of text, such as paragraphs, quotes, and poetry.
 
-- `center` **environment**, `\centering`: Centers text.
+- `\begin{center}`, `\centering`: Centers text.
   
-- `flushleft` **environment**, `\raggedright`: Aligns text to the left.
+- `\begin{flushleft}`, `\raggedright`: Aligns text to the left.
   
-- `flushright` **environment**, `\raggedleft`: Aligns text to the right.
+- `\begin{flushright}`, `\raggedleft`: Aligns text to the right.
 
-- `quote` **environment**: For short quotes, single-paragraph quotes.
+- `\begin{quote}`: Indents text on both sides; used for short quotes or single paragraphs.
 
-- `quotation` **environment**: For longer quotations spanning multiple paragraphs.
+- `\begin{quotation}`: Indents text on both sides and indents the first line of new paragraphs; used for long quotes spanning multiple paragraphs.
 
-- `verse` **environment**: For poetry, where line breaks are made with `\\` and stanzas are separated by a blank line.
+- `\begin{verse}`: Used for poetry. Line breaks are preserved using `\\`, and stanzas are separated by blank lines.
 
 ```latex
 \documentclass{article}
@@ -118,9 +118,9 @@ There are several environments for controlling the alignment and formatting of e
 
 The vertical distance between lines within a block of text can be adjusted using the `setspace` package.
 
-- `setspace` **package**: Provides tools to control the spacing between lines.
+- `\usepackage[<options>]{setspace}` **package**: Provides tools to control the spacing between lines.
 
-   | `options`        | Description                  |
+   | `<options>`      | Description                  |
    | ---------------- | ---------------------------- |
    | `singlespacing`  | Sets single line spacing.    |
    | `onehalfspacing` | Sets one-and-a-half spacing. |
@@ -130,20 +130,20 @@ The vertical distance between lines within a block of text can be adjusted using
 
 - `\begin{spacing}{<factor>}`: Applies a custom spacing factor to a specific block of text.
 
-- `\singlespacing`, `\onehalfspacing`, `\doublespacing`: Change the line spacing for all subsequent paragraphs in the document body.
+- `\singlespacing`, `\onehalfspacing`, `\doublespacing`: Switches (declarations) that change the line spacing for all subsequent text.
 
 ```latex
 \documentclass{article}
-\usepackage[onehalfspacing]{setspace} % Load the 'setspace' package
-\usepackage{lipsum}                   % For dummy text
+\usepackage[onehalfspacing]{setspace}
+\usepackage{lipsum} % For dummy text
 
 \begin{document}
 
 \section*{Global Spacing}
-\lipsum[1] % This will have 1.25 spacing.
+\lipsum[1] % Renders with the global one-half spacing.
 
 \begin{spacing}{2}
-\lipsum[2] % This will be double-spaced.
+\lipsum[2] % Renders with double spacing.
 \end{spacing}
 
 \end{document}
@@ -153,19 +153,19 @@ The vertical distance between lines within a block of text can be adjusted using
 
 ## Paragraph Spacing (the `parskip` package)
 
-By default, paragraphs are separated with a first-line indent. To switch to a "block" style where paragraphs are separated by vertical space instead, use the `parskip` package. This is preferred over manual adjustments since it automatically manages spacing in other environments, such as lists.
+By default, LaTeX separates paragraphs with a first-line indent and no vertical space. The `parskip` package changes this behavior to a "block" style (no indent, vertical space between paragraphs). This method is preferred over manual spacing adjustments as it preserves correct formatting for lists and other environments.
 
-- `parskip` **package**: Switches the paragraph indent to zero and add a vertical space between paragraphs.
+- `\usepackage[<options>]{parskip}` **package**: Removes paragraph indentation and adds vertical space between paragraphs.
 
-  | `options`         | Description                                                                 |
-  | ----------------- | --------------------------------------------------------------------------- |
-  | `skip=<length>`   | Sets the vertical space between paragraphs to a specified length.           |
-  | `indent=<length>` | Sets the paragraph indentation to a specific length instead of removing it. |
+  | `<options>`       | Description                                                       |
+  | ----------------- | ----------------------------------------------------------------- |
+  | `skip=<length>`   | Sets the vertical space between paragraphs to a specified length. |
+  | `indent=<length>` | Sets a paragraph indentation value (overriding the zero default). |
 
 ```latex
 \documentclass{article}
-\usepackage[skip=10pt]{parskip} % Load the 'parskip' package
-\usepackage{lipsum}             % For dummy text
+\usepackage[skip=10pt]{parskip}
+\usepackage{lipsum}
 
 \begin{document}
 
@@ -180,7 +180,7 @@ By default, paragraphs are separated with a first-line indent. To switch to a "b
 
 ## Special Characters and Symbols
 
-The following commands produce commonly used text symbols.
+Typographic symbols that are not available on standard keyboards are generated using specific commands.
 
 |     Symbol      | Name                     | Command         |
 | :-------------: | ------------------------ | --------------- |

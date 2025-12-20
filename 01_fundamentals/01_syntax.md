@@ -6,11 +6,11 @@ The **syntax** of a LaTeX document is the set of rules governing how commands, e
 
 ## Core Components
 
-**Commands** issue instructions, **environments** contain blocks of content, and **comments** are used for notes within the source code.
+**Commands** issue instructions, **environments** contain blocks of content, and **comments** are used for notes within the source code. Both commands and environments are case-sensitive and may accept mandatory arguments in curly braces `{}` or optional arguments in square brackets `[]`.
 
 - **Comment** (`%`): The percent sign marks the start of a comment. Any text following it on the same line is ignored by the compiler.
 
-- **Command** (`\`): An instruction that begins with a backslash. Commands are case-sensitive and accept mandatory arguments in curly braces `{}` or optional arguments in square brackets `[]`.
+- **Command** (`\`): An instruction that begins with a backslash.
 
 - **Environment** (`\begin{<name>}` & `\end{<name>}`): A block that applies specific formatting or logic to the enclosed content.
 
@@ -115,7 +115,7 @@ Certain characters are reserved for LaTeX syntax and must be escaped to appear i
 
 Verbatim tools render text exactly as it is typed, ignoring LaTeX commands and preserving whitespace. 
 
-- `verbatim` **environment**: Renders a block of text literally.
+- `\begin{verbatim}`: Renders a block of text literally.
 
 - `\verb|<text>|`: Renders inline text literally.
 
