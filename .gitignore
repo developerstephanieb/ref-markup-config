@@ -1,35 +1,58 @@
+# --- Core LaTeX Build Artifacts ---
 *.aux
-*.lof
 *.log
-*.lot
-*.fls
 *.out
 *.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dvi
+*.xdv
 *.fmt
 *.fot
 *.cb
 *.cb2
+
+# --- Lists (Figures, Tables) ---
+*.lof
+*.lot
+
+# --- Bibliography & Citations ---
 *.bbl
 *.bcf
 *.blg
 *.run.xml
 
-*.fdb_latexmk
-*.synctex.gz
+# --- Index & Glossary ---
+*.idx
+*.ind
+*.ilg
+*.glg
+*.glo
+*.gls
+*.ist
+
+# --- Beamer (Presentations) ---
 *.nav
 *.snm
 *.vrb
-*.bak
 
+# --- OS & Editor Configs ---
 .DS_Store
-
+.vscode/
+.history/
 *.swp
+*.bak
 *~
 
-.vscode
-.history
-.env
+# --- Virtual Environments (Python/Scripts) ---
+venv/
+env/
+.venv/
+.env/
 
+# --- Output Files ---
 *.pdf
 
-/example
+# --- Project Specific directories ---
+notes/
