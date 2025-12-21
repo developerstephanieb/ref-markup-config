@@ -4,6 +4,13 @@ The **syntax** of a LaTeX document is the set of rules governing how commands, e
 
 ---
 
+[Core Components](#core-components)    
+[Whitespace and Line Breads](#whitespace-and-line-breaks)     
+[Special Characters and Grouping](#special-characters-and-grouping)     
+[Verbatim Tools](#verbatim-text)
+
+---
+
 ## Core Components
 
 **Commands** issue instructions, **environments** contain blocks of content, and **comments** are used for notes within the source code. Both commands and environments are case-sensitive and may accept mandatory arguments in curly braces `{}` or optional arguments in square brackets `[]`.
@@ -43,7 +50,7 @@ LaTeX interprets whitespace according to specific rules and provides commands fo
 
 - `\noindent`: Suppresses the automatic indentation at the start of a paragraph.
 
-- `\hfill`: Inserts horizontal space that expands to fill the remaining width of the line..
+- `\hfill`: Inserts horizontal space that expands to fill the remaining width of the line.
 
 - `\hspace{<length>}`, `\vspace{<length>}`: Inserts a fixed amount of horizontal or vertical space.
 
@@ -100,9 +107,9 @@ Certain characters are reserved for LaTeX syntax and must be escaped to appear i
 
 \$5.00, 100\%, R\&D, and item \#1.
 
-``This is a double-quoted sentence.''
-
 `This is a single-quoted sentence.'
+
+``This is a double-quoted sentence.''
 
 {\large This text is large.}
 

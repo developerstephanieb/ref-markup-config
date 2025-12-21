@@ -4,6 +4,15 @@ Page layout determines the physical dimensions of the document, including paper 
 
 ---
 
+[Page Dimensions (the geometry package)](#page-dimensions-the-geometry-package)    
+[Headers and Footers](#headers-and-footers)    
+[Page Breaks](#page-breaks)     
+[Flexible Columns (the multicol package)](#flexible-columns-the-multicol-package)      
+[Sub-page Layouts](#sub-page-layouts)     
+[Margin Notes](#margin-notes)
+
+---
+
 ## Page Dimensions (the `geometry` package)
 
 The `geometry` package provides a unified interface for defining page dimensions. While some page layout `options` can be set in `\documentclass`, it’s best practice to define all dimensions with `geometry`.
@@ -50,12 +59,12 @@ Recurring content at the top and bottom of pages, such as page numbers and secti
 
 - `\pagestyle{<style>}`: Sets the global page style.
   
-  | `<style>`    | Description                                                                                                                                                                                                     |
-  | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `plain`      | Prints the page number in the footer (default for `article`).                                                                                                                                                   |
-  | `headings`   | Prints the current chapter/section title and page number in the header.                                                                                                                                         |
-  | `empty`      | Creates empty headers and footers (no page numbers).                                                                                                                                                            |
-  | `myheadings` | Allows for custom header content. Use `\markright{<right_text>}` <br>for  `oneside` documents or `\markboth{<left_text>}{<right_text>}` <br>for `twoside` documents to set different headers on even/odd pages. |
+  | `<style>`    | Description                                                                                                                                                                                             |
+  | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `plain`      | Prints the page number in the footer (default for `article`).                                                                                                                                           |
+  | `headings`   | Prints the current chapter/section title and page number in the header.                                                                                                                                 |
+  | `empty`      | Creates empty headers and footers (no page numbers).                                                                                                                                                    |
+  | `myheadings` | Allows for custom header content. Use `\markright{<right_text>}` for  `oneside` documents or `\markboth{<left_text>}{<right_text>}` for `twoside` documents to set different headers on even/odd pages. |
 
 - `\thispagestyle{<style>}`: Overrides the global style for the current page only.
 
@@ -94,9 +103,7 @@ The header on this page will display ''Even Page Header``.
 \end{document}
 ```
 
----
-
-## Custom Headers and Footers (the `fancyhdr` package)
+### Custom Headers and Footers (the `fancyhdr` package)
 
 For detailed control over headers and footers, including dividing them into left, center, and right fields, the `fancyhdr` package is required.
 
@@ -156,7 +163,7 @@ The second page uses the global style.
 
 ---
 
-## Controlling Page Breaks
+## Page Breaks
 
 Manual control over page breaks is sometimes necessary to ensure content stays together or starts on a fresh page.
 
@@ -263,14 +270,9 @@ Notes placed in the side margins are useful for annotations or editorial comment
 
 - `\reversemarginpar`: Switches the margin (left vs. right) where subsequent notes appear. Use `\normalmarginpar` to switch back.
 
-- `\usepackage{marginnote}`: Loads the package for non-floating margin notes. It provides support for environments (like lists, floats, and footnotes) where `\marginpar` may fail.
-
-- `\marginnote{<text>}[<offset>]`: Creates a margin note at the current exact vertical position. The optional `offset` argument adds vertical space that shifts the note up or down from its default anchor point.
-
 ```latex
 \documentclass{article}
 \usepackage[letterpaper, margin=1.5in, marginparwidth=1in]{geometry}
-\usepackage{marginnote}
 \usepackage{lipsum}
 
 \begin{document}
@@ -282,7 +284,30 @@ Notes placed in the side margins are useful for annotations or editorial comment
 \reversemarginpar
 
 \lipsum[2]
-\marginnote{This note is on the opposite margin and shifted upward by 1 cm.}[-1cm]
+\marginpar{This note is on the opposite margin.}
+
+\end{document}
+```
+
+### Custom Margin Notes (the `marginnote` package)
+
+The standard `\marginpar` command floats and can fail inside rigid environments (like equations, footnotes, or boxes).
+
+- `\usepackage{marginnote}`: Enables non-floating margin notes and provides support for environments (like lists, floats, and footnotes) where `\marginpar` may fail.
+
+- `\marginnote{<text>}[<offset>]`: Creates a margin note at the current exact vertical position. The optional `offset` argument adds vertical space that shifts the note up or down from its default anchor point.
+
+```latex
+\documentclass{article}
+\usepackage[letterpaper, margin=1.5in, marginparwidth=1in]{geometry}
+\usepackage{marginnote}
+\usepackage{lipsum}
+
+\begin{document}
+
+\[
+    E = mc^2 \marginnote{Offset for alignment}[-0.5cm]
+\]
 
 \end{document}
 ```

@@ -4,6 +4,15 @@ LaTeX provides a comprehensive set of tools for controlling the appearance of te
 
 ---
 
+[Global Settings](#global-settings)    
+[Font Appearance](#font-appearance)    
+[Paragraph and Block Layout](#paragraph-and-block-layout)     
+[Line Spacing (the setspace package)](#line-spacing-the-setspace-package)    
+[Paragraph Spacing (the parskip package)](#paragraph-spacing-the-parskip-package)    
+[Special Characters and Symbols](#special-characters-and-symbols)
+
+---
+
 ## Global Settings
 
 A document's foundational style is set in the preamble, establishing the default look for all text in the document.
@@ -89,9 +98,9 @@ There are several environments for controlling the alignment and formatting of e
   
 - `\begin{flushright}`, `\raggedleft`: Aligns text to the right.
 
-- `\begin{quote}`: Indents text on both sides; used for short quotes or single paragraphs.
+- `\begin{quote}`: Indents text on both sides. Used for short quotes or single paragraphs.
 
-- `\begin{quotation}`: Indents text on both sides and indents the first line of new paragraphs; used for long quotes spanning multiple paragraphs.
+- `\begin{quotation}`: Indents text on both sides and indents the first line of new paragraphs. Used for long quotes spanning multiple paragraphs.
 
 - `\begin{verse}`: Used for poetry. Line breaks are preserved using `\\`, and stanzas are separated by blank lines.
 
@@ -118,7 +127,7 @@ There are several environments for controlling the alignment and formatting of e
 
 The vertical distance between lines within a block of text can be adjusted using the `setspace` package.
 
-- `\usepackage[<options>]{setspace}` **package**: Provides tools to control the spacing between lines.
+- `\usepackage[<options>]{setspace}`: Provides tools to control the spacing between lines.
 
    | `<options>`      | Description                  |
    | ---------------- | ---------------------------- |
@@ -135,7 +144,7 @@ The vertical distance between lines within a block of text can be adjusted using
 ```latex
 \documentclass{article}
 \usepackage[onehalfspacing]{setspace}
-\usepackage{lipsum} % For dummy text
+\usepackage{lipsum}
 
 \begin{document}
 
@@ -155,7 +164,7 @@ The vertical distance between lines within a block of text can be adjusted using
 
 By default, LaTeX separates paragraphs with a first-line indent and no vertical space. The `parskip` package changes this behavior to a "block" style (no indent, vertical space between paragraphs). This method is preferred over manual spacing adjustments as it preserves correct formatting for lists and other environments.
 
-- `\usepackage[<options>]{parskip}` **package**: Removes paragraph indentation and adds vertical space between paragraphs.
+- `\usepackage[<options>]{parskip}`: Removes paragraph indentation and adds vertical space between paragraphs.
 
   | `<options>`       | Description                                                       |
   | ----------------- | ----------------------------------------------------------------- |
@@ -182,15 +191,15 @@ By default, LaTeX separates paragraphs with a first-line indent and no vertical 
 
 Typographic symbols that are not available on standard keyboards are generated using specific commands.
 
-|     Symbol      | Name                     | Command         |
-| :-------------: | ------------------------ | --------------- |
-|      $\S$       | Section sign             | `\S`            |
-|      $\P$       | Paragraph sign (pilcrow) | `\P`            |
-|  $\copyright$   | Copyright sign           | `\copyright`    |
-|     $\dag$      | Dagger                   | `\dag`          |
-|     $\ddag$     | Double dagger            | `\ddag`         |
-|    $\pounds$    | Pounds sterling sign     | `\pounds`       |
-| $\textellipsis$ | Ellipsis                 | `\textellipsis` |
+| Symbol | Name                     | Command         |
+| :----: | ------------------------ | --------------- |
+|   §    | Section sign             | `\S`            |
+|   ¶    | Paragraph sign (pilcrow) | `\P`            |
+|   ©    | Copyright sign           | `\copyright`    |
+|   †    | Dagger                   | `\dag`          |
+|   ‡    | Double dagger            | `\ddag`         |
+|   £    | Pounds sterling sign     | `\pounds`       |
+|   …    | Ellipsis                 | `\textellipsis` |
 
 ```latex
 \documentclass{article}
