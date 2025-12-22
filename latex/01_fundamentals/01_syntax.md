@@ -139,3 +139,15 @@ This is raw text # $ % &
 
 \end{document}
 ```
+
+---
+
+## Compiling
+
+To compile a `.tex` file locally:
+
+```bash
+pdflatex filename.tex
+```
+
+Or use [Overleaf](https://www.overleaf.com/) to compile online.
