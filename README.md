@@ -7,17 +7,6 @@
 
 ---
 
-## About
-
-This repository houses a structured compendium of technical documentation standards and configuration management protocols.
-
-It serves a dual purpose:
-
-1.  **Reference Architecture:** To standardize workflows for academic typesetting (LaTeX) and cloud infrastructure configuration (YAML) across research and engineering projects.
-2.  **Instructional Foundation:** To act as a modular curriculum for teaching technical writing and systems configuration. The materials are structured to guide learners from syntax fundamentals to advanced implementation patterns.
-
----
-
 ## Repository Structure
 
 ```
