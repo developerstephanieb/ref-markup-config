@@ -1,4 +1,67 @@
-# --- Core LaTeX Build Artifacts ---
+# ==============================================================================
+# UNIVERSAL IGNORES
+# ==============================================================================
+
+# --- macOS ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Linux ---
+.Desktop
+*~
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editor & IDE Configs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+*.sublime-workspace
+
+# --- Environments ---
+venv/
+env/
+.venv/
+.env
+.env.*
+
+# --- Keys & Certs ---
+*.pem
+*.key
+*.cert
+*.crt
+id_rsa
+id_dsa
+
+# --- Data & Logs ---
+input.txt
+output.txt
+error.txt
+data/
+datasets/
+*.log
+*.tmp
+*.bak
+*.dat
+
+# --- Authoring & Workflow ---
+_drafts/
+_scratch/
+_templates/
+
+# ==============================================================================
+# PROJECT SPECIFIC
+# ==============================================================================
+
+# --- LaTeX ---
+# Core Build Artifacts
 *.aux
 *.log
 *.out
@@ -13,17 +76,17 @@
 *.cb
 *.cb2
 
-# --- Lists (Figures, Tables) ---
+# Lists (Figures, Tables)
 *.lof
 *.lot
 
-# --- Bibliography & Citations ---
+# Bibliography & Citations
 *.bbl
 *.bcf
 *.blg
 *.run.xml
 
-# --- Index & Glossary ---
+# Index & Glossary
 *.idx
 *.ind
 *.ilg
@@ -32,27 +95,10 @@
 *.gls
 *.ist
 
-# --- Beamer (Presentations) ---
+# Beamer (Presentations)
 *.nav
 *.snm
 *.vrb
 
-# --- OS & Editor Configs ---
-.DS_Store
-.vscode/
-.history/
-*.swp
-*.bak
-*~
-
-# --- Virtual Environments (Python/Scripts) ---
-venv/
-env/
-.venv/
-.env/
-
-# --- Output Files ---
+# Output Files
 *.pdf
-
-# --- Project Specific directories ---
-notes/

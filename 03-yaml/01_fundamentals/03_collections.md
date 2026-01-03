@@ -1,6 +1,6 @@
 # Collections (Lists & Dictionaries)
 
-**Collections** are data structures that hold other data. YAML has two primary types: **lists** (also called sequences) and **dictionaries** (also called mappings).
+> **Collections** are data structures that hold other data. YAML has two primary types: **lists** (also called sequences) and **dictionaries** (also called mappings).
 
 ---
 

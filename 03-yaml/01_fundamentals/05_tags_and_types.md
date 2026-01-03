@@ -1,6 +1,6 @@
 # Tags and Types
 
-**Tags** allows you to explicitly specify the type of a piece of data. While YAML is excellent at automatically detecting types (like strings, numbers, and booleans), tags give you fine-grained control when there might be ambiguity.
+> **Tags** allows you to explicitly specify the type of a piece of data. While YAML is excellent at automatically detecting types (like strings, numbers, and booleans), tags give you fine-grained control when there might be ambiguity.
 
 ---
 
