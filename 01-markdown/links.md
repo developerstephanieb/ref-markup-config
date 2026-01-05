@@ -111,11 +111,11 @@ Links to other files in the same repository
 **Example:**
 ```markdown
 [Link to math-latex](./math-latex.md)    
-[Link to a github flavor](./02-flavors/github.md)     
+[Link to Hubblesite Image](../99-resources/images/hubblesite.jpg)      
 [Link to a README](/README.md)     
 ```
 
 **Rendered:**  
 [Link to math-latex](./math-latex.md)    
-[Link to github flavor](../02-flavors/github.md)     
+[Link to Hubblesite Image](../99-resources/images/hubblesite.jpg)      
 [Link to README](/README.md)     

@@ -7,7 +7,6 @@
 # Run this immediately after cloning/creating the repo.
 init:
 	@echo "Initializing Ref-Series structure..."
-	@mkdir -p 01-unit-name
 	@mkdir -p 99-resources
 	@mkdir -p _drafts
 	@mkdir -p _scratch
@@ -26,7 +25,7 @@ clean-scratch:
 	@echo "Scratchpad cleared."
 
 # 3. AUDIT
-# A simple utility to count how many modules (lectures) you have written.
+# Count the number of units and modules.
 stats:
 	@echo "Project Statistics:"
 	@echo "Units: $$(find . -maxdepth 1 -type d -name '[0-9]*' | wc -l | xargs)"
