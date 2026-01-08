@@ -58,23 +58,15 @@ I use [Google][1] for search and [GitHub][gh] for code.
 
 ### 3. Autolinks
 
-Turns a raw URL or email into a clickable link.
-
-**Syntax:**
-```markdown
-<URL>
-<EMAIL>
-```
+Automatically turn a raw URL or email into a clickable link by enclosing it in angle brackets `<>`.
 
 **Example:**
 ```markdown
-[https://www.google.com](https://www.google.com)    
-<janedoe@example.com>
+Contact <support@example.com> for assistance.
 ```
 
 **Rendered:**    
-[https://www.google.com](https://www.google.com)    
-<janedoe@example.com>
+Contact <support@example.com> for assistance.
 
 ---
 
@@ -84,7 +76,7 @@ Links to headers within the same document. Converts header text to lowercase and
 
 **Syntax:**
 ```markdown
-[Go to Section](#section-name)
+[Link text](#heading-id)
 ```
 
 **Example:**
@@ -101,7 +93,7 @@ Links to headers within the same document. Converts header text to lowercase and
 
 Links to other files in the same repository
 
-**Syntax:**
+**Common Patterns:**
 | Target        | Syntax                   |
 | ------------- | ------------------------ |
 | Same Folder   | `[Text](./filename.md)`  |
@@ -110,12 +102,12 @@ Links to other files in the same repository
 
 **Example:**
 ```markdown
-[Link to math-latex](./math-latex.md)    
-[Link to Hubblesite Image](../99-resources/images/hubblesite.jpg)      
-[Link to a README](/README.md)     
+[Link to math-latex reference](./math-latex.md)    
+[Link to image in resources](../99-resources/images/hubblesite.jpg)      
+[Link to root README](/README.md)     
 ```
 
 **Rendered:**  
-[Link to math-latex](./math-latex.md)    
-[Link to Hubblesite Image](../99-resources/images/hubblesite.jpg)      
-[Link to README](/README.md)     
+[Link to math-latex reference](./math-latex.md)    
+[Link to image in resources](../99-resources/images/hubblesite.jpg)      
+[Link to root README](/README.md) 

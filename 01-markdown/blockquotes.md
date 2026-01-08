@@ -11,7 +11,7 @@
 
 Start a line with a right angle bracket `>`. Best practice is to use `>` on every line of the quote, though some renderers support "lazy wrapping" (only putting it on the first line).
 
-**Syntax:**
+**Example:**
 ```markdown
 > This is a blockquote.
 > It spans multiple lines.
@@ -27,7 +27,7 @@ Start a line with a right angle bracket `>`. Best practice is to use `>` on ever
 
 Use additional brackets `>>` to increase the nesting level.
 
-**Syntax:**
+**Example:**
 ```markdown
 > Level 1
 >> Level 2
@@ -45,36 +45,50 @@ Use additional brackets `>>` to increase the nesting level.
 
 Blockquotes can contain other Markdown elements like headers, lists, and code blocks.
 
-**Syntax:**
+**Example:**
 ```markdown
 > ### The Header
 > * List item 1
-> * List item 2
+> * List item 2    
+> 
+> Some `inline code` here.
 ```
 
 **Rendered:**
 > ### The Header
 > * List item 1
-> * List item 2
+> * List item 2    
+> 
+> Some `inline code` here.
 
 ---
 
 ### 4. Github Alerts
 
-Specific to GitHub Flavored Markdown (GFM). A special syntax to render colored alert boxes. The type must be in all caps: `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`.
+Specific to GitHub Flavored Markdown (GFM). A special syntax to render colored alert boxes.
 
-**Syntax:**
+**Available Alert Types:**
+
+| Type        | Usage          | Purpose                                    |
+| :---------- | :------------- | :----------------------------------------- |
+| `NOTE`      | `[!NOTE]`      | Highlights information users should notice |
+| `TIP`       | `[!TIP]`       | Provides helpful advice or best practices  |
+| `IMPORTANT` | `[!IMPORTANT]` | Critical information for success           |
+| `WARNING`   | `[!WARNING]`   | Urgent info about risks or consequences    |
+| `CAUTION`   | `[!CAUTION]`   | Advises about potential negative outcomes  |
+
+**Example:**
 ```markdown
 > [!NOTE]
-> This is a note.
+> This is a note with useful information.
 
 > [!WARNING]
-> This is a warning.
+> This action may have serious consequences.
 ```
 
 **Rendered (on Github):**
 > [!NOTE]
-> This is a note.
+> This is a note with useful information.
 
 > [!WARNING]
-> This is a warning.
+> This action may have serious consequences.

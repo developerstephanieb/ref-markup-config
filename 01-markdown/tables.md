@@ -11,7 +11,7 @@
 
 Tables are created using pipes `|` to separate columns and hyphens `-` to separate the header from the body. The outer pipes are optional but recommended for readability.
 
-**Syntax:**
+**Example:**
 ```markdown
 | Header 1 | Header 2 |
 | -------- | -------- |
@@ -31,7 +31,7 @@ Tables are created using pipes `|` to separate columns and hyphens `-` to separa
 
 Colons `:` inside the header separator line determine column alignment.
 
-**Syntax:**
+**Alignment Options:**
 | Alignment      | Syntax  |
 | -------------- | ------- |
 | Left (Default) | `:---`  |
@@ -84,16 +84,16 @@ Inline formatting (bold, italic, code, links, images) can be used inside cells. 
 
 To display a literal pipe character `|` inside a cell, escape it with a backslash (`\`) or use the HTML entity `&#124;`.
 
-**Syntax:**
+**Example:**
 ```markdown
-| Syntax   | Result |
+| Method   | Result |
 | :------- | :----- |
 | `\|`     | \|     |
 | `&#124;` | &#124; |
 ```
 
 **Rendered:**
-| Syntax   | Result |
+| Method   | Result |
 | :------- | :----- |
 | `\|`     | \|     |
 | `&#124;` | &#124; |
