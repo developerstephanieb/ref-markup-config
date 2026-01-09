@@ -115,7 +115,7 @@ Used to show added or removed lines. Use the `diff` identifier and start lines w
 
 To display a code block inside a code block (like in this documentation), wrap the inner code with more backticks than the inner code uses.
 
-**Syntax:**
+**Example:**
 `````markdown
 To show 3 backticks, use 4:
 ````markdown

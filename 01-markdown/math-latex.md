@@ -1,4 +1,4 @@
-# Math & LaTeX
+# Math (Using LaTeX)
 
 [1. Delimiters](#1-delimiters)     
 [2. Common Symbols Lookup](#2-common-symbols-lookup)     
