@@ -128,10 +128,8 @@ Specific to GitHub Flavored Markdown (GFM). GitHub automatically creates links f
 
 **Example:**
 ```markdown
-Thanks @octocat for reviewing! This fixes #42 and relates to microsoft/vscode#1000.
-The bug was introduced in commit a1b2c3d4e5f.
+Tracking upstream bug: facebook/react#1
 ```
 
 **Rendered:**    
-Thanks @octocat for reviewing! This fixes #42 and relates to microsoft/vscode#1000.
-The bug was introduced in commit a1b2c3d4e5f.
+Tracking upstream bug: facebook/react#1
