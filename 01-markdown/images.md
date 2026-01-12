@@ -45,7 +45,7 @@ Nesting an image syntax inside a link syntax allows the image to be clickable.
 
 ---
 
-### 3. Resizing (HTML)
+### 3. Resizing
 
 Standard Markdown does not support image resizing. Use raw HTML tags `<img />` to control width or alignment.
 
