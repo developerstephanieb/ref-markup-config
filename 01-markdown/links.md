@@ -115,7 +115,7 @@ Links to other files in the same repository
 
 ---
 
-### 6. GitHub Magic Links
+### 6. GitHub Magic Links (GFM)
 
 Specific to GitHub Flavored Markdown (GFM). GitHub automatically creates links for certain references without any Markdown syntax.
 
