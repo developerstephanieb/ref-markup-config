@@ -60,13 +60,13 @@ Inline formatting (bold, italic, code, links, images) can be used inside cells. 
 
 **Example:**
 ```markdown
-| Feature | Example                                     |
-| ------- | ------------------------------------------- |
-| Bold    | **important**                               |
-| Italic  | *emphasis*                                  |
-| Code    | `inline_code()`                             |
-| Link    | [Open Docs](https://example.com)            |
-| Image   | ![Hubblesite](/99-resources/hubblesite.jpg) |
+| Feature | Example                                      |
+| ------- | -------------------------------------------- |
+| Bold    | **important**                                |
+| Italic  | *emphasis*                                   |
+| Code    | `inline_code()`                              |
+| Link    | [Open Docs](https://example.com)             |
+| Image   | ![Hubblesite](/99-resources/hubblesite2.jpg) |
 ```
 
 **Rendered:**

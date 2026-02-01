@@ -12,7 +12,7 @@
 
 ### 1. Basic Syntax
 
-Diagrams are created using code blocks marked with the `mermaid` identifier.
+Diagrams are created using code blocks marked with the `mermaid` language identifier. 
 
 **Syntax:**
 ````markdown
@@ -21,6 +21,14 @@ Diagrams are created using code blocks marked with the `mermaid` identifier.
     [Definitions]
 ```
 ````
+
+| Diagram Type        | Diagram Identifier  |
+| ------------------- | ------------------- |
+| Flowchart           | `graph`/`flowchart` |
+| Sequence            | `sequenceDiagram`   |
+| Class               | `classDiagram`      |
+| Entity Relationship | `erDiagram`         |
+| Pie Chart           | `pie`               |
 
 **Example:**
 ````markdown
